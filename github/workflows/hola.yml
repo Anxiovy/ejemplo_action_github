@@ -1,0 +1,19 @@
+name: mi primer action
+
+on: push
+
+jobs:
+ ejecutar:
+ runs-on: ubuntu-latest
+
+ steps:
+ - name: descargar repositorios
+ uses: actions/checkout@v4
+
+  - name: intalar node js
+uses: actions/setup-node@v4
+with:
+node-version: '24'
+
+  - name: ejecutar mi app
+run: node hola.js
